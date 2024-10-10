@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+.BG-vid{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+body{
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header{
+    position: fixed;
+    backdrop-filter: blur(8px);
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #afafaf;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    height: 80px;
+}
+
+header nav .links{
+    display: flex;
+    color: #fff;
+}
+
+header nav .links li{
+    position: relative;
+    margin: 0px 25px;
+    height: 80px;
+    line-height: 80px;
+}
+
+
+header nav .links li::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #08d665;
+    transition: 0.7s;
+    box-shadow: 0px 0px 10px #08d665;
+}
+
+header nav .links li:hover::after,
+header nav .links li.activeLog::after{
+    width: 100%;
+}
+
+header nav .links li a{
+    color: #fff;
+    font-size: 17px;
+}
+
+header nav .social-links a{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 14px;
+}
+
+header nav .social-links a:hover{
+    color: #08d665;
+    transition: 0.7s;
+}
+header nav .links li{
+    list-style-type: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper{
+    width: 420px;
+    border: 2px solid rgb(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 5px;
+    padding: 30px 45px;
+    backdrop-filter: blur(8px);
+}
+
+.wrapper:hover{
+    box-shadow: 0px 0px 15px 1px;
+    transition: all 0.9s ease;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper h1:hover{
+    text-shadow: 0px 0px 5px;
+    transition: all 0.4s ease;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0px;
+}
+
+.wrapper .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(255, 255, 255, 0.2);
+    font-size: 16px;
+    padding: 20px 45px 20px 18px;
+    color: #fff;
+}
+
+.wrapper .input-box i{
+    position: absolute;
+    top: 40%;
+    padding: 0px 10px;
+    right: 10px;
+    transition: all 0.4s ease;
+    font-size: 22px;
+
+   
+}
+
+.wrapper .remmember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0px 15px;
+}
+
+.wrapper .remmember-forgot label input{
+    color: #fff;
+    margin-right: 3px;
+}
+
+.wrapper .remmember-forgot a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.wrapper .remmember-forgot a:hover{
+    color: #08d665;
+    text-shadow: 0px 0px 4px  #08d665;
+    transition: all 0.4s ease;
+    font-weight: bolder;
+
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-decoration-break: 0px 0px 10px rgb(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+
+.wrapper .btn:hover{
+    box-shadow: -10px 0px 20px #08d665  , 10px 0px 20px #601cfc;
+    transition: 0.4s;
+}
+
+.wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0px 20px;
+}
+
+.register-link a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.register-link a:hover{
+    color: #08d665;
+    text-shadow: 0px 0px 4px  #08d665;
+    transition: all 0.4s ease;
+    font-weight: bolder;
+}
+
+.wrapper .input-box label{
+    position: absolute;
+    top: 50%;
+    padding: 0px 5px;
+    transform: translateY(-50%);
+    left: 10px;
+    transition: all 0.4s ease;
+    color: #fff;
+    pointer-events: none;
+}
+
+.wrapper .input-box input:focus + label,
+.wrapper .input-box input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 16px;
+    color: #08d665;
+}
